@@ -2,8 +2,6 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  console.log(`the component is now mounted.`)
-
   const cards = document.querySelectorAll('.card');
   let startX, currentX, offsetX, currentCard, isDragging = false;
 
@@ -54,6 +52,12 @@ onMounted(() => {
           cards[1].style.zIndex = parseInt(window.getComputedStyle(cards[1]).zIndex) + 1;
         }
       });
+
+      if (direction === 1) {
+        console.log(`SWIPE RIGHT!`)
+      } else {
+        console.log(`swipe left`)
+      }
     } else {
       // Reset the card position
       currentCard.style.transform = 'translateX(0) rotate(0)';
@@ -65,8 +69,21 @@ onMounted(() => {
 <template>
   <div class="card-stack">
 
-    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"></div>
-    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Daniel, 28</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Vanessa, 26</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Elizabeth, 25</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Jack, 30</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Vin, 24</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name"></h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Daniel</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Daniel</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Daniel</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Daniel</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Daniel</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Daniel</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Daniel</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Daniel</h1></div>
+    <div class="card" style="background-image: url('https://via.placeholder.com/300x500');"><h1 class="name">Daniel</h1></div>
   </div>
 </template>
 
@@ -76,6 +93,12 @@ onMounted(() => {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.name {
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
 }
 
 .card {
@@ -90,14 +113,50 @@ onMounted(() => {
 }
 
 .card:nth-child(1) {
-  z-index: 3;
+  z-index: 12;
 }
 
 .card:nth-child(2) {
-  z-index: 2;
+  z-index: 11;
 }
 
 .card:nth-child(3) {
+  z-index: 10;
+}
+
+.card:nth-child(4) {
+  z-index: 9;
+}
+
+.card:nth-child(5) {
+  z-index: 8;
+}
+
+.card:nth-child(6) {
+  z-index: 7;
+}
+
+.card:nth-child(7) {
+  z-index: 6;
+}
+
+.card:nth-child(8) {
+  z-index: 5;
+}
+
+.card:nth-child(9) {
+  z-index: 4;
+}
+
+.card:nth-child(10) {
+  z-index: 3;
+}
+
+.card:nth-child(11) {
+  z-index: 2;
+}
+
+.card:nth-child(12) {
   z-index: 1;
 }
 

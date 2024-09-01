@@ -23,6 +23,6 @@ import NavBar from "@/components/NavBar.vue";
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    //overflow: hidden;
+    /*overflow: hidden;*/
   }
 </style>
